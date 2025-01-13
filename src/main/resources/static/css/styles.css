@@ -1,0 +1,75 @@
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+/* Body becomes a flex container, stacking elements vertically */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Container to ensure proper spacing and content filling */
+.container {
+    flex-grow: 1; /* Takes up available space */
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Logo size */
+.logo img {
+    width: 355px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    font-size: 12px;
+    background-color: black;
+    position: relative;
+    margin-top: auto;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    color: white; /* Ensure text is visible */
+}
+
+.carousel-inner img {
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+/* Ensure default position of carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Default Bootstrap style */
+    top: 50%; /* Default Bootstrap style */
+    transform: translateY(-50%); /* Default Bootstrap style */
+    padding: 0 5px; /* Optional: Adjust padding if needed */
+    width: 30px; /* Adjust the width of the button */
+    height: 30px; /* Adjust the height of the button */
+    background-color: black; /* Icon color */
+}
+
+/* Keep the arrows on the sides of the images */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Ensure visibility */
+    border-radius: 10%;
+    width: 20px; /* Adjust the icon size */
+    height: 20px; /* Adjust the icon size */
+}
